@@ -15,4 +15,6 @@ class PersonUser
 	belongs_to :User
 	has_many :Filter
 	has_many :Source
+
+	validates :accessToken, allow_nil: false, presence: true 
 end

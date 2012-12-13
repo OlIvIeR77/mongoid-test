@@ -9,11 +9,12 @@ class App < Sinatra::Base
 	Mongoid.load!('./mongoid.yml', :development)
 
 	get '/' do
-	  user = User.new(:first_name => "Ludwig", :last_name => "Beethoven")
+	  user = User.new
+    personUser = PersonUser.new
+    column = Column.new
+    source = Source.new
+    filter = Filter.new
 	  
-	  user.save
-
-	  "Hello, I am #{user.first_name} #{user.last_name}"
 	  binding.pry
 	end
 

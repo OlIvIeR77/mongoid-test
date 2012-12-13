@@ -1,7 +1,13 @@
-# A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
+gemspec
+
 gem 'sinatra'
 gem 'mongoid'
 gem 'pry'
+
+group :cucumber do
+  gem "rspec"
+  gem 'pry'
+  gem 'cucumber'
+end
